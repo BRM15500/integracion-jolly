@@ -18,7 +18,7 @@ export class JuegoComponent implements OnInit {
     this.currentUser = this.authService.getAccount();
     console.log(this.currentUser);
     if(this.currentUser !== null){
-      if(this.currentUser.rol !== 2){
+      if(this.currentUser.rol !== 1){
         this.router.navigate(['/Home']);
       }else{
         this.showPage = true;

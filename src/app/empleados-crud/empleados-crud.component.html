@@ -1,5 +1,5 @@
 <div class="container" *ngIf="showPage">
-  <div class="card" *ngIf="currentUser.rol === 1">
+  <div class="card" *ngIf="currentUser.rol === 2">
     <div class="card-header">
       <h3>Datos del empleado</h3>
     </div>
@@ -40,7 +40,7 @@
           </div>
           <div class="col-6">
             <div class="form-group">
-              <button class="btn btn-success mt-4 col-12" (click)="guardarEmp()" [disabled]="empleadoForm.status !== 'VALID'">Guardar empleado</button>
+              <button class="primary" (click)="guardarEmp()" [disabled]="empleadoForm.status !== 'VALID'">Guardar empleado</button>
             </div>
           </div>
         </div>
@@ -120,8 +120,8 @@
               src='{{emp.img}},{{emp.base64}}' /></td>
             <td>{{emp.puesto}}</td>
             <td>
-              <button class="btn btn-warning" (click)="editEmp(emp)">Editar</button>
-              <button class="btn btn-danger" (click)="elimEmp(emp)">Eliminar</button>
+              <button class="orange" (click)="editEmp(emp)">Editar</button>
+              <button class="dark" (click)="elimEmp(emp)">Eliminar</button>
             </td>
           </tr>
         </tbody>
